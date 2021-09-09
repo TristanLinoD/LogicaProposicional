@@ -7,6 +7,11 @@
     <meta name="description" content="Programa de Logica proposicional">
     <meta name="robots" content="follow, index">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/laptop.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="../CSS/desktop.css" media="screen and (min-width: 1440px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="../JS/main.js"></script>
     <title>Logica Proposicional</title>
 </head>
@@ -21,50 +26,87 @@
             </ul>
         </nav>
     </header>
-    <!-- <main>
-        <div>
-            <div>
-                <h2>Diagrama</h2>
-                <h3>Sentencias</h3>
-                <h3>Verdadero / Falso</h3>
+    <main>
+        <section class="main__contenedor">
+            <div class="contenedor__logico">
+                <div class="logico__titulos">
+                    <h2>Diagrama</h2>
+                    <div class="titulos__inputs">
+                        <h6>Sentencias</h6>
+                        <h6>Falso | Verdadero</h6>
+                    </div>
+                </div>
+                <div class="logico__sentencias">
+                    <div class="sentencias__contenedor">
+                        <label for="sentencia_p" class="sentencias__entrada">
+                            <span>Sentencia P</span><br>
+                            <input type="text" id="sentencia_p" placeholder="Ingrese la sentencia P">
+                        </label>
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="sentencias__contenedor">
+                        <label for="sentencia_q" class="sentencias__entrada">
+                            <span>Sentencia Q</span><br>
+                            <input type="text" id="sentencia_q" placeholder="Ingrese la sentencia Q">
+                        </label>
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="sentencias__contenedor">
+                        <label for="sentencia_r" class="sentencias__entrada">
+                            <span>Sentencia R</span><br>
+                            <input type="text" id="sentencia_r" placeholder="Ingrese la sentencia R">
+                        </label>
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="sentencias__contenedor">
+                        <label for="sentencia_s" class="sentencias__entrada">
+                            <span>Sentencia S</span><br>
+                            <input type="text" id="sentencia_s" placeholder="Ingrese la sentencia S">
+                        </label>
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="sentencias__contenedor">
+                        <label for="sentencia_c" class="sentencias__entrada">
+                            <span>Sentencia C</span><br>
+                            <input type="text" id="sentencia_c" placeholder="Ingrese la sentencia C">
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="" class="">
-                    <input type="text">
-                    <input type="checkbox">
-                </label>
-                <label for="">
-                    <input type="text">
-                    <input type="checkbox">
-                </label>
-                <label for="">
-                    <input type="text">
-                    <input type="checkbox">
-                </label>
-                <label for="">
-                    <input type="text">
-                    <input type="checkbox">
-                </label>
-                <label for="">
-                    <input type="text">
-                    <input type="checkbox">
-                </label>
+            <div class="contenedor__respuestas">
+                <div>
+                    <label for="">
+                        <input type="text">
+                    </label>
+                    <button type="button" onclick="prueba()"></button>
+                    <p id="respuesta">aaa</p>
+                </div>
+                <div>
+                    <label for="">
+                        <input type="text">
+                    </label>
+                    <button type="button"></button>
+                    <button type="button"></button>
+                </div>
             </div>
-            <div>
-                <label for="">
-                    <input type="text">
-                </label>
-                <button type="button"></button>
-            </div>
-            <div>
-                <label for="">
-                    <input type="text">
-                </label>
-                <button type="button"></button>
-                <button type="button"></button>
-            </div>
-        </div>
-    </main> -->
+        </section>
+    </main>
     <footer>
 
     </footer>
