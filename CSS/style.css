@@ -201,8 +201,12 @@ input:checked + .slider:before {
     width: 74px;
 }
 .contenedor__botones .botones:hover {
-    background-color: #4d94eb;
+    background-color: rgb(55, 117, 194);
     font-size: 1.5rem;
+}
+
+.contenedor__botones .botones:active {
+    background-color: #2a5d9c;
 }
 .contenedor__botones #ejecutar{
     left: calc(60%);
@@ -219,5 +223,93 @@ input:checked + .slider:before {
     width: 50%;
     max-width: 582px;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
 }
+.contenedor__respuestas .respuesta__wff {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.respuesta__wff .wff__titulo  {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.wff__titulo h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: white;
+}
+.wff__titulo #boton--evaluar{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+    border: none;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+.wff__titulo #boton--evaluar:hover {
+    font-size: 1.45rem;
+    background-color: rgb(231, 229, 229);
+}
+.wff__titulo #boton--evaluar:active{
+    background-color: rgb(214, 214, 214);
+}
+.respuesta__wff #wff {
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.contenedor__respuestas .respuesta__pasos {
+    width: 100%;
+    height: 70%;
+}
+.respuesta__pasos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.respuesta__pasos h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 5px;
+}
+.respuesta__pasos #pasos__solucion {
+    width: 100%;
+    height: 85%;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.contenedor__botones #limpiarAll {
+    width: 125px;
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    left: calc(50% - 62.5px);
+}
+.contenedor__botones #limpiarAll:hover{
+    font-size: 1.45rem;
+    background-color: rgb(231, 229, 229);
+} 
+.contenedor__botones #limpiarAll:active{
+    background-color: rgb(214, 214, 214);
+} 
+
 

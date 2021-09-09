@@ -89,23 +89,26 @@
                     </div>
                 </div>
                 <div class="contenedor__botones">
-                    <button class="botones" id="limpiar">Limpiar</button>
-                    <button class="botones" id="ejecutar">Ejecutar</button>
+                    <button class="botones" id="limpiar" type="button">Limpiar</button>
+                    <button class="botones" id="ejecutar" type="button">Ejecutar</button>
                 </div>
             </div>
             <div class="contenedor__respuestas">
-                <div>
-                    <label>
+                <div class="respuesta__wff">
+                    <div class="wff__titulo">
+                        <h2>Formula WFF</h2><br>
+                        <button id="boton--evaluar" type="button" onclick="prueba()">Evaluar</button>
+                    </div>
+                    <label id="wff">
                     </label>
-                    <button type="button" onclick="prueba()"></button>
-                    <p id="respuesta">aaa</p>
                 </div>
-                <div>
-                    <label for="">
-                        <input type="text">
+                <div class="respuesta__pasos">
+                    <h2>Pasos</h2>
+                    <label id="pasos__solucion">
                     </label>
-                    <button type="button"></button>
-                    <button type="button"></button>
+                </div>
+                <div class="contenedor__botones">
+                    <button class="botones" id="limpiarAll" type="button">Limpiar Todo</button>
                 </div>
             </div>
         </section>
