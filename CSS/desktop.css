@@ -1,0 +1,8 @@
+.sentencias__contenedor .sentencias__entrada input{
+    width: 500px;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+}
