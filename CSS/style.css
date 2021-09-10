@@ -199,6 +199,7 @@ input:checked + .slider:before {
     font-size: 1.4rem;
     font-weight: 300;
     width: 74px;
+    cursor: pointer;
 }
 .contenedor__botones .botones:hover {
     background-color: rgb(55, 117, 194);
@@ -255,6 +256,7 @@ input:checked + .slider:before {
     border: none;
     padding: 5px;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 .wff__titulo #boton--evaluar:hover {
     font-size: 1.45rem;
@@ -303,6 +305,7 @@ input:checked + .slider:before {
     border: none;
     color: black;
     left: calc(50% - 62.5px);
+    cursor: pointer;
 }
 .contenedor__botones #limpiarAll:hover{
     font-size: 1.45rem;

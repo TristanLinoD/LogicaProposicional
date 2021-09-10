@@ -19,6 +19,8 @@ function execute(){
     const R = noPalabras(document.getElementById("sentencia_r").value.toUpperCase().trim());
     const S = noPalabras(document.getElementById("sentencia_s").value.toUpperCase().trim());
     const C = noPalabras(document.getElementById("sentencia_c").value.toUpperCase().trim());
+    
+    
     let aux = C.replace("SI Y SOLO SI","<-->");
     aux = aux.replace("IGUAL A","<-->");
     aux = aux.replace("SI-ENTONCES","-->");
