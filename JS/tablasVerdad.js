@@ -1,4 +1,4 @@
-function and(p,q){
+export function and(p,q){
     if(p==true && q==true){
         console.log(`It's true `);
         return true;
@@ -13,7 +13,7 @@ function and(p,q){
         return false;
     }
 }
-function or(p,q){
+export function or(p,q){
     if(p==true && q==true){
         console.log(`It's true `);
         return true;
@@ -28,7 +28,7 @@ function or(p,q){
         return false;
     }
 }
-function not(p){
+export function not(p){
     if(p==true){
         console.log(`It's false`);
         return false;
@@ -38,7 +38,7 @@ function not(p){
         return true;
     }
 }
-function not2(p,q){
+export function not2(p,q){
     if(p==true && q==true){
         console.log(`It's false p & false q`);
         return [false,false];
@@ -53,7 +53,7 @@ function not2(p,q){
         return [true,true];
     }
 }
-function imp(p,q){
+export function imp(p,q){
     if(p==true && q==true){
         console.log(`It's true `);
         return true;
@@ -68,7 +68,7 @@ function imp(p,q){
         return true;
     }
 }
-function bico(p,q){
+export function bico(p,q){
     if(p==true && q==true){
         console.log(`It's true `);
         return true;
@@ -83,7 +83,7 @@ function bico(p,q){
         return false;
     }
 }
-function compleja(texto){
+export function compleja(texto){
     let propcom=texto.toUpperCase();
     console.log(`Este es el texto ${propcom}`);
     let division=propcom.split(" ");
