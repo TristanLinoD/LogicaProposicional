@@ -1,4 +1,5 @@
 import {and, or, not, not2, imp, bico} from '../JS/tablasVerdad.js';
+import {excepcion} from '../JS/excepciones.js'
 
 function clean() {
     document.getElementById('sentencia_c').value = '';
@@ -12,4 +13,3 @@ function cleanAll() {
     document.getElementById('wff').innerHTML = '';
     document.getElementById('pasos__solucion').innerHTML = '';
 }
-console.log(and(true, true));
