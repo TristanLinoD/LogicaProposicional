@@ -19,13 +19,17 @@ function execute(){
     const R = document.getElementById("sentencia_r").value.toUpperCase();
     const S = document.getElementById("sentencia_s").value.toUpperCase();
     const C = document.getElementById("sentencia_c").value.toUpperCase();
-    let compleja = C.split(" ");
+    let compleja = WhitoutSpace(C.trim().split(" "));
     console.log(`P: ${P}`);
     console.log(`Q: ${Q}`);
     console.log(`R: ${R}`);
     console.log(`S: ${S}`);
     console.log(`C: ${C}`);
-    console.log(`Lista C: ${compleja}`);   
+    //console.log(`Lista C: ${compleja}`);  
+    for (let i=0; i < compleja.length; i++) {
+        if(compleja[i]!=" ")
+            console.log(`compleja  ${compleja[i]} `);
+     } 
 }
 function and(p,q){
     if(p==true && q==true){
@@ -118,4 +122,13 @@ function excepcion(word, next_word){
     }else {
         return false;
     }
+}
+function WhitoutSpace(array){
+    let aux = [];
+    for(let i=0;array.length;i++){
+        if(!array[i].startsWith(" ")){
+            aux.push(array[i]);
+        }
+    }
+    return aux;
 }
