@@ -26,7 +26,11 @@ function execute(){
     let aux = C;
     if(P !== ""){
         if(P === "Y" || P === "O" || P === "No"){
-
+            /* for (let i = 0; i < n; i++) {
+                // excepcion()
+                // Se divide por palabras y se checa si la palabra i == i + 1 solo con y y o
+                // Hay una excepcion en no
+            } */
         }else{
             for (let i = 0; i < n; i++) {
                 aux = aux.replace(P,"P");
@@ -72,6 +76,10 @@ function execute(){
     }
 
     document.getElementById('wff').innerHTML=aux;
+}
+function evaluar(){
+    let wff = document.getElementById('wff').innerHTML;
+    console.log(utf8_decode(wff));
 }
 function and(p,q){
     if(p==true && q==true){
