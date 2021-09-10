@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="../JS/main.js"></script>
+    <script src="../JS/index.js"></script>
+    <script src="../JS/tablasVerdad.js"></script>
     <title>Logica Proposicional</title>
 </head>
 <body>
@@ -89,7 +90,7 @@
                     </div>
                 </div>
                 <div class="contenedor__botones">
-                    <button class="botones" id="limpiar" type="button">Limpiar</button>
+                    <button class="botones" id="limpiar" type="button" onclick="clean()">Limpiar</button>
                     <button class="botones" id="ejecutar" type="button">Ejecutar</button>
                 </div>
             </div>
@@ -108,7 +109,7 @@
                     </label>
                 </div>
                 <div class="contenedor__botones">
-                    <button class="botones" id="limpiarAll" type="button">Limpiar Todo</button>
+                    <button class="botones" id="limpiarAll" type="button" onclick="cleanAll()">Limpiar Todo</button>
                 </div>
             </div>
         </section>
