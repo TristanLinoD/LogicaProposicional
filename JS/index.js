@@ -24,6 +24,9 @@ function execute(){
     aux = aux.replace("SI-ENTONCES","-->");
     aux = aux.replace("SI ENTONCES","-->");
     aux = aux.replace("ENTONCES","-->");
+    aux = aux.replace("NO","~");
+    aux = aux.replace("Y","^");
+    aux = aux.replace("O","v");
 
     //Bien
     aux = aux.replace(P,"P");
