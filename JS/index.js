@@ -79,7 +79,9 @@ function execute(){
 }
 function evaluar(){
     let wff = document.getElementById('wff').innerHTML;
-    console.log(utf8_decode(wff));
+    wff = wff.replace("&gt;", ">");
+    wff = wff.replace("&lt;", "<");
+    console.log(wff);
 }
 function and(p,q){
     if(p==true && q==true){
