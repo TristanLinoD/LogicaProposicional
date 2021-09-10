@@ -83,13 +83,3 @@ export function bico(p,q){
         return false;
     }
 }
-export function compleja(texto){
-    let propcom=texto.toUpperCase();
-    console.log(`Este es el texto ${propcom}`);
-    let division=propcom.split(" ");
-    for(let x=0;division.lenght;i++){
-        if(division[x]=="NO"){
-            console.log(`~`);
-        }
-    }
-}
