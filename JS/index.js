@@ -14,22 +14,41 @@ function cleanAll() {
     document.getElementById('pasos__solucion').innerHTML = '';
 }
 function execute(){
-    const P = document.getElementById("sentencia_p").value.toUpperCase().trim();
-    const Q = document.getElementById("sentencia_q").value.toUpperCase().trim();
-    const R = document.getElementById("sentencia_r").value.toUpperCase().trim();
-    const S = document.getElementById("sentencia_s").value.toUpperCase().trim();
-    const C = document.getElementById("sentencia_c").value.toUpperCase();
-    let compleja = C.trim().split(" ");
+    const P = noPalabras(document.getElementById("sentencia_p").value.toUpperCase().trim());
+    const Q = noPalabras(document.getElementById("sentencia_q").value.toUpperCase().trim());
+    const R = noPalabras(document.getElementById("sentencia_r").value.toUpperCase().trim());
+    const S = noPalabras(document.getElementById("sentencia_s").value.toUpperCase().trim());
+    const C = noPalabras(document.getElementById("sentencia_c").value.toUpperCase().trim());
+    let aux = C.replace("SI Y SOLO SI","<-->");
+    aux = aux.replace("IGUAL A","<-->");
+    aux = aux.replace("SI-ENTONCES","-->");
+    aux = aux.replace("SI ENTONCES","-->");
+    aux = aux.replace("ENTONCES","-->");
+
+    //Bien
+    aux = aux.replace(P,"P");
+    aux = aux.replace(Q,"Q");
+    aux = aux.replace(R,"R");
+    aux = aux.replace(S,"S");
+    document.getElementById('wff').innerHTML=aux;
+    /*const dict = {
+        P:"P",
+        Q:"Q",
+        R:"R",
+        S:"S",
+        NO:"~",
+        Y:"^",
+        O:"v",
+        ENTONCES:"-->",
+        SIYSOLOSI:"<-->",
+        SIENTONCES:"-->",
+        IGUALA:"<-->"
+    }
     console.log(`P: ${P}`);
     console.log(`Q: ${Q}`);
     console.log(`R: ${R}`);
     console.log(`S: ${S}`);
-    console.log(`C: ${C}`);
-    //console.log(`Lista C: ${compleja}`);  
-    for (let i=0; i < compleja.length; i++) {
-        if(compleja[i]!=" ")
-            console.log(`compleja  ${compleja[i]} `);
-     } 
+    console.log(`C: ${C}`);*/
 }
 function and(p,q){
     if(p==true && q==true){
@@ -122,4 +141,7 @@ function excepcion(word, next_word){
     }else {
         return false;
     }
+}
+function noPalabras(texto){
+    return texto.replace(/[ ]+/g," ");
 }
