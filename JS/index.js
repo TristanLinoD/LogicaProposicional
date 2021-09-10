@@ -19,10 +19,7 @@ function execute(){
     const R = noPalabras(document.getElementById("sentencia_r").value.toUpperCase().trim());
     const S = noPalabras(document.getElementById("sentencia_s").value.toUpperCase().trim());
     const C = noPalabras(document.getElementById("sentencia_c").value.toUpperCase().trim());
-    let iterador = function(string) {
-        return string.split(" ").length;
-    }
-    let n = iterador(C);
+    let n = tamanio(C);
     let aux = C;
     if(P !== ""){
         if(P === "Y" || P === "O" || P === "No"){
@@ -79,8 +76,11 @@ function execute(){
 }
 function evaluar(){
     let wff = document.getElementById('wff').innerHTML;
-    wff = wff.replace("&gt;", ">");
-    wff = wff.replace("&lt;", "<");
+    let n = tamanio(wff);
+    for (let i = 0; i < n; i++) {
+        wff = wff.replace("&gt;", ">");
+        wff = wff.replace("&lt;", "<");
+    }
     console.log(wff);
 }
 function and(p,q){
@@ -177,4 +177,7 @@ function excepcion(word, next_word){
 }
 function noPalabras(texto){
     return texto.replace(/[ ]+/g," ");
+}
+function tamanio(string) {
+    return string.split(" ").length;
 }
