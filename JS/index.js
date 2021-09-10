@@ -19,41 +19,59 @@ function execute(){
     const R = noPalabras(document.getElementById("sentencia_r").value.toUpperCase().trim());
     const S = noPalabras(document.getElementById("sentencia_s").value.toUpperCase().trim());
     const C = noPalabras(document.getElementById("sentencia_c").value.toUpperCase().trim());
-    
-    
-    let aux = C.replace("SI Y SOLO SI","<-->");
-    aux = aux.replace("IGUAL A","<-->");
-    aux = aux.replace("SI-ENTONCES","-->");
-    aux = aux.replace("SI ENTONCES","-->");
-    aux = aux.replace("ENTONCES","-->");
-    aux = aux.replace("NO","~");
-    aux = aux.replace("Y","^");
-    aux = aux.replace("O","v");
-
-    //Bien
-    aux = aux.replace(P,"P");
-    aux = aux.replace(Q,"Q");
-    aux = aux.replace(R,"R");
-    aux = aux.replace(S,"S");
-    document.getElementById('wff').innerHTML=aux;
-    /*const dict = {
-        P:"P",
-        Q:"Q",
-        R:"R",
-        S:"S",
-        NO:"~",
-        Y:"^",
-        O:"v",
-        ENTONCES:"-->",
-        SIYSOLOSI:"<-->",
-        SIENTONCES:"-->",
-        IGUALA:"<-->"
+    let iterador = function(string) {
+        return string.split(" ").length;
     }
-    console.log(`P: ${P}`);
-    console.log(`Q: ${Q}`);
-    console.log(`R: ${R}`);
-    console.log(`S: ${S}`);
-    console.log(`C: ${C}`);*/
+    let n = iterador(C);
+    let aux = C;
+    if(P !== ""){
+        if(P === "Y" || P === "O" || P === "No"){
+
+        }else{
+            for (let i = 0; i < n; i++) {
+                aux = aux.replace(P,"P");
+            }
+        }
+    }
+    if(Q !== ""){
+        if(Q === "Y" || Q === "O" || Q === "No"){
+
+        }else{
+            for (let i = 0; i < n; i++) {
+                aux = aux.replace(Q,"Q");
+            }
+        }
+    }
+    if(R !== ""){
+        if(R === "Y" || R === "O" || R === "No"){
+
+        }else{
+            for (let i = 0; i < n; i++) {
+                aux = aux.replace(R,"R");
+            }
+        }
+    }
+    if(S !== ""){
+        if(S === "Y" || S === "O" || S === "No"){
+
+        }else{
+            for (let i = 0; i < n; i++) {
+                aux = aux.replace(S,"S");
+            }
+        }
+    }
+    for (let i = 0; i < n; i++) {
+        aux = aux.replace("IGUAL A","<-->");
+        aux = aux.replace("SI Y SOLO SI","<-->");
+        aux = aux.replace("SI-ENTONCES","-->");
+        aux = aux.replace("SI ENTONCES","-->");
+        aux = aux.replace("ENTONCES","-->");
+        aux = aux.replace("NO","~");
+        aux = aux.replace("Y","^");
+        aux = aux.replace("O","v");
+    }
+
+    document.getElementById('wff').innerHTML=aux;
 }
 function and(p,q){
     if(p==true && q==true){
