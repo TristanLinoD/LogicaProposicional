@@ -14,12 +14,12 @@ function cleanAll() {
     document.getElementById('pasos__solucion').innerHTML = '';
 }
 function execute(){
-    const P = document.getElementById("sentencia_p").value.toUpperCase();
-    const Q = document.getElementById("sentencia_q").value.toUpperCase();
-    const R = document.getElementById("sentencia_r").value.toUpperCase();
-    const S = document.getElementById("sentencia_s").value.toUpperCase();
+    const P = document.getElementById("sentencia_p").value.toUpperCase().trim();
+    const Q = document.getElementById("sentencia_q").value.toUpperCase().trim();
+    const R = document.getElementById("sentencia_r").value.toUpperCase().trim();
+    const S = document.getElementById("sentencia_s").value.toUpperCase().trim();
     const C = document.getElementById("sentencia_c").value.toUpperCase();
-    let compleja = WhitoutSpace(C.trim().split(" "));
+    let compleja = C.trim().split(" ");
     console.log(`P: ${P}`);
     console.log(`Q: ${Q}`);
     console.log(`R: ${R}`);
@@ -122,13 +122,4 @@ function excepcion(word, next_word){
     }else {
         return false;
     }
-}
-function WhitoutSpace(array){
-    let aux = [];
-    for(let i=0;array.length;i++){
-        if(!array[i].startsWith(" ")){
-            aux.push(array[i]);
-        }
-    }
-    return aux;
 }
