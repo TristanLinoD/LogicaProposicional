@@ -82,6 +82,32 @@ function evaluar(){
         wff = wff.replace("&lt;", "<");
     }
     console.log(wff);
+    let valor_p = document.getElementById('valor_p').checked;
+    let valor_q = document.getElementById('valor_q').checked;
+    let valor_r = document.getElementById('valor_r').checked;
+    let valor_s = document.getElementById('valor_s').checked;
+    console.log(valor_p);
+    console.log(valor_q);
+    console.log(valor_r);
+    console.log(valor_s);
+    for(let i=0; i < (n); i++){
+        wff = wff.replace("P", valor_p === true ? "T" : "F");
+        wff = wff.replace("Q", valor_q === true ? "T" : "F");
+        wff = wff.replace("R", valor_r === true ? "T" : "F");
+        wff = wff.replace("S", valor_s === true ? "T" : "F");
+    }
+    document.getElementById('pasos__solucion').innerHTML = wff;
+    for (let i = 0; i < n; i++) {
+        if(wff[i] !== " "){
+            if(wff[i] === "~"){
+                let word = not(wff[i+2]) === true ? "T" : "F";
+                wff = wff.substring(i+3,wff.length);
+                wff =  word + " " + wff;
+                console.log(wff);
+                i = 0;
+            }
+        }
+    }
 }
 function and(p,q){
     if(p==true && q==true){
